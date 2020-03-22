@@ -1,0 +1,136 @@
+body {
+  background-color: #f4f4f4;
+}
+
+main {
+  margin: 5rem auto 15rem;
+  max-width: 60rem;
+  padding: 2rem 10rem;
+  background-color: white;
+}
+
+h1,
+h2 {
+  margin: 1.5em 0 0.75em;
+  font-weight: normal;
+}
+
+.bx--form-item {
+  margin-bottom: 2rem;
+}
+
+.bx--modal .bx--form-item {
+  margin: 0.75rem 0;
+}
+
+.bx--radio-button-wrapper {
+  margin-bottom: 0.5rem;
+}
+
+.bx--radio-button-group {
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.bx--label {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding-bottom: 0.25rem;
+  color: #000;
+}
+
+.bx--checkbox-label {
+  padding-left: 1.625rem;
+}
+
+.bx--form-item,
+.bx--radio-button-group {
+  display: block;
+}
+
+.bx--radio-button-wrapper .bx--radio-button__label {
+  align-items: start;
+  justify-content: start;
+}
+
+.filled input:disabled,
+.bx--radio-button:disabled + .bx--radio-button__label,
+.bx--checkbox:disabled + .bx--checkbox-label,
+.bx--checkbox-label[data-contained-checkbox-disabled="true"] {
+  color: #555;
+}
+
+.bx--radio-button:disabled
+  + .bx--radio-button__label
+  .bx--radio-button__appearance::before,
+.bx--radio-button:disabled:checked
+  + .bx--radio-button__label
+  .bx--radio-button__appearance::before,
+.bx--checkbox:checked:disabled + .bx--checkbox-label::before,
+.bx--checkbox:indeterminate:disabled + .bx--checkbox-label::before,
+.bx--checkbox-label[data-contained-checkbox-state="true"][data-contained-checkbox-disabled="true"]::before,
+.bx--checkbox-label[data-contained-checkbox-state="mixed"][data-contained-checkbox-disabled="true"]::before {
+  background-color: #555;
+  border-color: #555;
+}
+
+.bx--checkbox:disabled + .bx--checkbox-label::before,
+.bx--checkbox-label[data-contained-checkbox-disabled="true"]::before,
+.bx--radio-button:disabled
+  + .bx--radio-button__label
+  .bx--radio-button__appearance,
+.bx--radio-button:disabled:checked
+  + .bx--radio-button__label
+  .bx--radio-button__appearance {
+  border-color: #555;
+}
+
+.filled a {
+  color: #3b6ec0;
+}
+
+.filled #share {
+  display: none;
+}
+
+.other-content {
+  height: auto;
+  padding: 0;
+  margin-left: 0.25rem;
+  display: inline-block;
+  width: 10rem;
+}
+
+.other-content:focus {
+  outline-offset: 0px;
+}
+
+.bx--radio-button__label-text {
+  flex-grow: 1;
+}
+
+#restart {
+  display: none;
+}
+
+.filled #restart {
+  display: block;
+}
+
+@media only screen and (max-width: 60rem) {
+  body {
+    background-color: white;
+  }
+
+  main {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding: 3rem;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  main {
+    padding: 1.25rem;
+  }
+}
