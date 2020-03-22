@@ -16,8 +16,8 @@
 	window.addEventListener("popstate", init)
 
 	async function init() {
-		console.log("HEY");
-		console.log(window.location.hash);
+		closeModal()
+
 		if (window.location.hash && window.location.hash.length > 1) {
 			for (const inputEl of FORM_ELEMENT.querySelectorAll("input, button")) {
 				if (inputEl.id !== "restart") {
@@ -99,6 +99,7 @@
 		const inputEl = document.getElementById(inputId)
 		if (!(inputEl instanceof HTMLInputElement)) return
 		inputEl.checked = true
+		handleFormChange()
 	}
 
 	function handleOtherContentBlur(e) {
@@ -108,6 +109,7 @@
 		const inputEl = document.getElementById(inputId)
 		if (!(inputEl instanceof HTMLInputElement)) return
 		if (!contentEl.value) inputEl.checked = false
+		handleFormChange()
 	}
 
 	async function handleShare() {

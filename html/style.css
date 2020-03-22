@@ -98,15 +98,11 @@ h2 {
   padding: 0;
   margin-left: 0.25rem;
   display: inline-block;
-  width: 10rem;
+  width: 12rem;
 }
 
 .other-content:focus {
   outline-offset: 0px;
-}
-
-.bx--radio-button__label-text {
-  flex-grow: 1;
 }
 
 #restart {

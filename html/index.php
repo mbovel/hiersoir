@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Hier soir</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.css" />
 	<link rel="stylesheet" href="style.css" />
 </head>
@@ -18,7 +18,7 @@
 		<form action="">
 
 			<div class="bx--form-item">
-				<label for="from class=" bx--label">Rempli par:</label>
+				<label for="from" class=" bx--label">Rempli par:</label>
 				<input id="from" type="mail" class="bx--text-input" name="from" placeholder="Prénom Nom">
 			</div>
 			<div class="bx--form-item">
@@ -71,7 +71,7 @@
 			<?php endforeach ?>
 
 			<div class="bx--form-item">
-				<button class="bx--btn bx--btn--primary" type="button" id="share">Partager</button>
+				<button class="bx--btn bx--btn--primary" type="button" id="share">Enregistrer et envoyer</button>
 			</div>
 
 			<div class="bx--form-item">
@@ -99,7 +99,7 @@
 						<input id="shared-link" type="url" readonly class="bx--text-input" value="https://www.example.com" placeholder="Optional placeholder text" data-modal-primary-focus>
 					</div>
 
-					<p>Ce lien n'est valable qu'une semaine, son contenu sera ensuite automatiquement effacé.</p>
+					<p>Ce lien est valable une semaine, son contenu sera ensuite automatiquement effacé.</p>
 				</div>
 
 			</div>

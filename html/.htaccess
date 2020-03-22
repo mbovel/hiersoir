@@ -15,13 +15,13 @@
 #     https://tools.ietf.org/html/draft-ietf-acme-acme-12
 
 <IfModule mod_rewrite.c>
-   RewriteEngine On
-   RewriteCond %{HTTPS} !=on
-   # (1)
-   # RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
-   # RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
-   # RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    # (1)
+    # RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+    # RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
+    # RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
 
 # ----------------------------------------------------------------------
@@ -50,39 +50,7 @@
     # (1)
     # RewriteCond %{HTTPS} !=on
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
-
-# ----------------------------------------------------------------------
-# | Forcing the `www.` at the beginning of URLs                        |
-# ----------------------------------------------------------------------
-
-# Rewrite example.com → www.example.com
-
-# The same content should never be available under two different
-# URLs, especially not with and without `www.` at the beginning.
-# This can cause SEO problems (duplicate content), and therefore,
-# you should choose one of the alternatives and redirect the other
-# one.
-#
-# (!) NEVER USE BOTH WWW-RELATED RULES AT THE SAME TIME!
-
-# (1) The rule assumes by default that both HTTP and HTTPS
-#     environments are available for redirection.
-#     If your SSL certificate could not handle one of the domains
-#     used during redirection, you should turn the condition on.
-#
-#     https://github.com/h5bp/server-configs-apache/issues/52
-
-# Be aware that the following might not be a good idea if you use "real"
-# subdomains for certain parts of your website.
-
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    # (1)
-    # RewriteCond %{HTTPS} !=on
-    RewriteCond %{HTTP_HOST} !^www\. [NC]
-    RewriteCond %{SERVER_ADDR} !=127.0.0.1
-    RewriteCond %{SERVER_ADDR} !=::1
-    RewriteRule ^ %{ENV:PROTO}://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-</IfModule>
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE "application/atom+xml" "application/javascript" "application/json" "application/ld+json" "application/manifest+json" "application/rdf+xml" "application/rss+xml" "application/schema+json" "application/vnd.geo+json" "application/vnd.ms-fontobject" "application/x-font-ttf" "application/x-javascript" "application/x-web-app-manifest+json" "application/xhtml+xml" "application/xml" "font/eot" "font/opentype" "image/bmp" "image/svg+xml" "image/vnd.microsoft.icon" "image/x-icon" "text/cache-manifest" "text/css" "text/html" "text/javascript" "text/plain" "text/vcard" "text/vnd.rim.location.xloc" "text/vtt" "text/x-component" "text/x-cross-domain-policy" "text/xml"
