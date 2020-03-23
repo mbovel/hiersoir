@@ -75,7 +75,7 @@
 			</div>
 
 			<div class="bx--form-item">
-				<button class="bx--btn bx--btn--primary" type="button" id="restart">Recommencer</button>
+				<button class="bx--btn bx--btn--primary" type="button" id="restart">Remplir un nouveau formulaire</button>
 			</div>
 
 		</form>
