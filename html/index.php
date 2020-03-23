@@ -9,7 +9,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.css" />
 	<link rel="stylesheet" href="style.css" />
-	<script src="https://www.google.com/recaptcha/api.js?render=6LcEduMUAAAAAB8eJXou15nBU_8PL_xDcFeuW2gh"></script>
 </head>
 
 <body>
@@ -115,6 +114,7 @@
 			<span tabindex="0"></span>
 		</div>
 
+		<script src="https://www.google.com/recaptcha/api.js?render=6LcEduMUAAAAAB8eJXou15nBU_8PL_xDcFeuW2gh"></script>
 		<script src="index.js"></script>
 	</main>
 
