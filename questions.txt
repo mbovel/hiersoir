@@ -24,22 +24,22 @@
 - 7 — trop film d’action
 
 #singleChoice Tendresse:
-- 1 — trop mielleux
+- 1 — quelle tendresse ? 😢
 - 2
 - 3
 - 4 – parfait
 - 5
 - 6
-- 7 — quelle tendresse ? 😢
+- 7 — trop mielleux
 
 #singleChoice Durée:
-- 1 — trop long
+- 1 — trop court
 - 2
 - 3
 - 4 — parfait
 - 5
 - 6
-- 7 — trop court
+- 7 — trop long
 
 #singleChoice Présence sonore:
 - 1 — pas assez expressif
