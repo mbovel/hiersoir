@@ -54,6 +54,7 @@ h2 {
 }
 
 .filled input:disabled,
+.filled textarea:disabled,
 .bx--radio-button:disabled + .bx--radio-button__label,
 .bx--checkbox:disabled + .bx--checkbox-label,
 .bx--checkbox-label[data-contained-checkbox-disabled="true"] {
