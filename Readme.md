@@ -1,6 +1,6 @@
 # Hiersoir.ch
 
-[Hiersoir.ch](https://hiersoir.ch) was originally a joke from the universe of my short story [“On s'écrit”](https://salejeune.com/on-secrit). In the story, the main character asks the girl he spent the night with to fill out a satisfaction form. For fun, I decided the make this form become real.
+[Hiersoir.ch](https://hiersoir.ch) was originally a joke from the universe of my short story [“On s'écrit”](https://salejeune.com/on-secrit). In the story, the main character asks the girl he spent the night with to fill out a satisfaction form. For fun, I made this form come real.
 
 ![Site screenshot](./screenshot.png)
 
