@@ -9,6 +9,7 @@
 	const MODAL_CLOSE_BUTTON = document.querySelector(".bx--modal-close")
 	const SHARED_LINK_INPUT = document.getElementById("shared-link")
 	const FROM_INPUT = document.getElementById("from")
+	const RECAPTCHA_SITE_KEY = "6LcEduMUAAAAAB8eJXou15nBU_8PL_xDcFeuW2gh"
 
 	init()
 
@@ -16,10 +17,15 @@
 	window.addEventListener("popstate", init)
 
 	async function init() {
+		grecaptcha.ready(() =>
+			grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'form_view' })
+		);
+
+
 		closeModal()
 
 		if (window.location.hash && window.location.hash.length > 1) {
-			for (const inputEl of FORM_ELEMENT.querySelectorAll("input, button")) {
+			for (const inputEl of FORM_ELEMENT.querySelectorAll("input, textarea, button")) {
 				if (inputEl.id !== "restart") {
 					inputEl.setAttribute("disabled", "disabled")
 				}
@@ -33,7 +39,7 @@
 			const data = await decryptMessage(key, iv, cipher)
 			setFormData(data);
 		} else {
-			for (const inputEl of FORM_ELEMENT.querySelectorAll("input, button")) {
+			for (const inputEl of FORM_ELEMENT.querySelectorAll("input, textarea, button")) {
 				inputEl.removeAttribute("disabled")
 			}
 
@@ -43,11 +49,11 @@
 				setFormData(localStorage["data"]);
 			}
 
-			if (!(FROM_INPUT instanceof HTMLInputElement)) throw new Error("")
+			if (!(FROM_INPUT instanceof HTMLInputElement)) throw new Error("From input is not an input!")
 			FROM_INPUT.select()
 		}
 
-		for (const inputEl of FORM_ELEMENT.querySelectorAll("input")) {
+		for (const inputEl of FORM_ELEMENT.querySelectorAll("input, textarea")) {
 			inputEl.addEventListener("input", handleFormChange)
 		}
 
@@ -128,7 +134,7 @@
 		params.set("id", id)
 		params.set("key", await exportCryptoKey(key))
 
-		if (!(SHARED_LINK_INPUT instanceof HTMLInputElement)) throw new Error("")
+		if (!(SHARED_LINK_INPUT instanceof HTMLInputElement)) throw new Error("Shared link input is not an input!")
 		SHARED_LINK_INPUT.value = window.location.href.split('#')[0] + "#" + params.toString()
 		openModal()
 		SHARED_LINK_INPUT.focus()
@@ -164,17 +170,19 @@
 		const data = {}
 		for (const [name, value] of new FormData(FORM_ELEMENT)) {
 			const firstInput = document.getElementsByName(name)[0];
-			if (!(firstInput instanceof HTMLInputElement)) throw new Error("")
-
-			switch (firstInput.type) {
-				case "text":
-				case "radio":
-					data[name] = value;
-					break;
-				case "checkbox":
-					if (!data[name]) data[name] = []
-					data[name].push(value)
-					break;
+			if (firstInput instanceof HTMLInputElement) {
+				switch (firstInput.type) {
+					case "text":
+					case "radio":
+						data[name] = value;
+						break;
+					case "checkbox":
+						if (!data[name]) data[name] = []
+						data[name].push(value)
+						break;
+				}
+			} else if (firstInput instanceof HTMLTextAreaElement) {
+				data[name] = value;
 			}
 		}
 		return JSON.stringify(data)
@@ -189,18 +197,20 @@
 		const data = JSON.parse(serialized)
 		for (const [name, value] of Object.entries(data)) {
 			const firstInput = document.getElementsByName(name)[0]
-			if (!(firstInput instanceof HTMLInputElement)) throw new Error("")
-
-			switch (firstInput.type) {
-				case "text":
-					firstInput.value = value
-					break;
-				case "radio":
-					setBooleanInput(name, value)
-					break;
-				case "checkbox":
-					value.map(v => setBooleanInput(name, v))
-					break;
+			if (firstInput instanceof HTMLInputElement) {
+				switch (firstInput.type) {
+					case "text":
+						firstInput.value = value
+						break;
+					case "radio":
+						setBooleanInput(name, value)
+						break;
+					case "checkbox":
+						value.map(v => setBooleanInput(name, v))
+						break;
+				}
+			} else if (firstInput instanceof HTMLTextAreaElement) {
+				firstInput.value = value
 			}
 		}
 	}
@@ -228,9 +238,13 @@
 	 * @see https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 	 */
 	async function serverStore(data = {}) {
-		const searchParams = new URLSearchParams()
-		searchParams.set("data", JSON.stringify(data))
-		const body = searchParams.toString()
+		const params = new URLSearchParams()
+		params.set("data", JSON.stringify(data))
+
+		const token = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'form_submit' })
+		params.set("token", token)
+
+		const body = params.toString()
 
 		// Default options are marked with *
 		const response = await fetch(STORE_URL, {

@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.css" />
 	<link rel="stylesheet" href="style.css" />
+	<script src="https://www.google.com/recaptcha/api.js?render=6LcEduMUAAAAAB8eJXou15nBU_8PL_xDcFeuW2gh"></script>
 </head>
 
 <body>
@@ -69,6 +70,13 @@
 					</fieldset>
 				<?php endif ?>
 			<?php endforeach ?>
+
+			<div class="bx--form-item">
+				<label for="text-area-2" class="bx--label">Commentaires</label>
+				<div class="bx--text-area__wrapper">
+					<textarea name="comments" id="text-area-2" class="bx--text-area bx--text-area--v2" rows="8" cols="50"></textarea>
+				</div>
+			</div>
 
 			<div class="bx--form-item">
 				<button class="bx--btn bx--btn--primary" type="button" id="share">Enregistrer et envoyer</button>

@@ -7,6 +7,9 @@ header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') error(400, "Expect a POST request.");
 if (empty($_POST["data"])) error(400, "Missing data parameter.");
+if (empty($_POST["token"])) error(400, "Missing token parameter.");
+
+check_recaptcha($_POST["token"]);
 
 do {
 	$id = uniqid();
