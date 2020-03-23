@@ -30,4 +30,4 @@ Technologies used:
 - Google's [reCAPTCHA v3](https://developers.google.com/recaptcha/docs/v3) is used to avoid automated storage requests.
 - The content of the form is parsed from `questions.txt`.
 - For easy development, a [`docker-compose`](https://docs.docker.com/compose/) file is available.
-- `.htaccess` content comes from [HTML5 Boilerplate](https://html5boilerplate.com/)
+- `.htaccess` content comes from [HTML5 Boilerplate](https://html5boilerplate.com/).
