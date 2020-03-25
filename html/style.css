@@ -114,6 +114,16 @@ h2 {
   display: block;
 }
 
+footer {
+  margin: 5rem 0;
+}
+
+footer p {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
 @media only screen and (max-width: 60rem) {
   body {
     background-color: white;
