@@ -5,8 +5,8 @@
 #multipleChoice Qualité de la discussion préliminaire:
 - passionnante
 - ennuyeuse
-- excitante
 - classique
+- excitante
 - sourde
 - <em>deep</em>
 - vacillante
@@ -88,7 +88,6 @@
 
 #multipleChoice Ça manquait de:
 - rythme
-- sensualité
 - sobriété
 - communication
 - crème chantillis
@@ -102,24 +101,24 @@
 - mes oreilles
 - mon clitoris
 - mon anus
-- mes seins
-- mes testicules
 - mes pieds
 - mes fesses
 - mon cou
+- mes seins
+- mes testicules
 - mes hanches
 - mes cheveux
 - mes bras
 - mes aisselles
 
 #multipleChoice Mes favorites:
-- cunni
-- anal
-- 69
 - sur le côté
 - andromaque
 - fellation
+- 69
 - missionnaire
+- cunni
+- anal
 - levrette
 - cuillère
 
@@ -129,7 +128,7 @@
 - dans le jacuzzi
 - <em>bondage</em>
 - <a href="https://youtu.be/KdS6HFQ_LUc">S&M</a>
-- toys
+- jouets
 - <em>facesitting</em>
 - à plusieurs
 
@@ -145,16 +144,16 @@
 - monte un groupe de rap
 - s'écrive
 
-#multipleChoice J'aimerais bien qu'on le fasse sur fond de:
-- <a href="https://youtu.be/GXFSK0ogeg4"/><em>Carmina Burana</em> de Carl Orff</a>
-- <a href="https://youtu.be/7jMlFXouPk8">Pink Floyd</a>
-- <a href="https://youtu.be/VKzWLUQizz8">Justice</a>
-- <a href="https://youtu.be/rYoZgpAEkFs">champs d'oiseaux un matin de printemps</a>
-- <a href="https://youtu.be/d8RYUZT57XA">Diana Krall</a>
+#multipleChoice J'aimerais qu'on le fasse sur fond de:
 - <a href="https://youtu.be/Q0d79HRQ_JU">xx</a>
-- <a href="https://youtu.be/mlFs3OXR9mQ">Paul Kalkbrenner</a>
-- <a href="https://youtu.be/eryKY1fhUlo"><em>My Funny Valentine</em> avec Sting à la voix et Chris Botti à la trompette !</a>
+- <a href="https://youtu.be/VKzWLUQizz8">Justice</a>
 - <a href="https://youtu.be/JctWPz7BVXA">Red Hot</a>
+- <a href="https://youtu.be/7jMlFXouPk8">Pink Floyd</a>
+- <a href="https://youtu.be/d8RYUZT57XA">Diana Krall</a>
+- <a href="https://youtu.be/mlFs3OXR9mQ">Paul Kalkbrenner</a>
+- <a href="https://youtu.be/GXFSK0ogeg4"/><em>Carmina Burana</em> de Carl Orff</a>
+- <a href="https://youtu.be/rYoZgpAEkFs">champs d'oiseaux un matin de printemps</a>
+- <a href="https://youtu.be/eryKY1fhUlo"><em>My Funny Valentine</em> avec Sting à la voix et Chris Botti à la trompette !</a>
 - c'est bien sans musique
 
 #singleChoice Je t’aime:
@@ -165,13 +164,11 @@
 - à la folie !
 
 #multipleChoice En pensant à toi, j'écoute:
-- <a href="https://youtu.be/1cIjiBWYZp8"><em>Que je t'aime</em>, Camille (reprise de Johnny Halliday)</a>
+- <a href="https://youtu.be/rzeLynj1GYM"><em>La vie en rose</em>, Édith Piaf</a>
 - <a href="https://youtu.be/4kaEiFtg2N0"><em>Sensuelle et sans suite</em>, Serge Gainsbourg</a>
 - <a href="https://youtu.be/Fop1vnLwlaA"><em>Trois nuits par semaine</em>, Indochine</a>
 - <a href="https://youtu.be/yDvSWmk2_gc"><em>Je vous trouve un charme fou</em>, Hoshi (avec Gaëtan Roussel)</a>
 - <a href="https://youtu.be/mwhX5V1Gn6w"><em>Comment te dire adieu</em>, Françoise Hardy</a>
-- <a href="https://youtu.be/FwaVegAzT84"><em>Les mains froides</em>, Oldelaf</a>
-- <a href="https://youtu.be/GcNDGHv9Teo"><em>Serre-moi</em>, Tryo</a>
 - <a href="https://youtu.be/emjk26UcJ5I"><em>T'es fait pour me plaire</em>, Alice et Moi</a>
 - <a href="https://youtu.be/8XsH_W9TDfg"><em>J'aime tes fesses</em>, Katerine & Jeanne Balibar</a>
 - <a href="https://youtu.be/K6JvcH61YKc"><em>Et si tu n'existais pas</em>, Iggy Pop (reprise de Joe Dassin)</a>
@@ -179,12 +176,13 @@
 - <a href="https://youtu.be/XrYkYwKwA-w"><em>Premiers frissons d'amour</em>, Christine Roque</a>
 - <a href="https://youtu.be/2uqpXetUT5w"><em>Comment lui dire</em>, France Gall</a>
 - <a href="https://youtu.be/K2C-FO4Q5Zw"><em>Gaëlle</em>, Stupeflip</a>
-- <a href="https://youtu.be/rzeLynj1GYM"><em>La vie en rose</em>, Édith Piaf</a>
+- <a href="https://youtu.be/1cIjiBWYZp8"><em>Que je t'aime</em>, Camille (reprise de Johnny Halliday)</a>
 - <a href="https://youtu.be/NHnUH7zDwLw"><em>Le prochain amour</em>, Jacques Brel</a>
 
 #singleChoice J’ai envie de te revoir:
+- tu me manques déjà
 - très vite
 - à l'occasion
-- pourquoi pas
+- une fois, peut-être
 - à la rigueur
 - non
