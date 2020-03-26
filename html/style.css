@@ -58,7 +58,7 @@ h2 {
 .bx--radio-button:disabled + .bx--radio-button__label,
 .bx--checkbox:disabled + .bx--checkbox-label,
 .bx--checkbox-label[data-contained-checkbox-disabled="true"] {
-  color: #555;
+  color: #000;
 }
 
 .bx--radio-button:disabled
