@@ -87,13 +87,15 @@
 		</form>
 
 		<footer>
-			<p>Ce formulaire est à l'origine un élément de la nouvelle <a href="https://salejeune.com/on-secrit/">«On s'écrit»</a>, mais n'hésitez pas à en faire usage dans la vraie vie !</p>
+			<p>Ce formulaire est à l'origine un élément fictif de la nouvelle <a href="https://salejeune.com/on-secrit/">«On s'écrit»</a>, mais n'hésitez pas à en faire usage dans la vraie vie !</p>
 
 			<p>Les données du formulaire sont enregistrées uniquement lors d'un clic sur le bouton «Enregistrer et envoyer» ci-dessus. Elles sont alors chiffrées <a href="https://fr.wikipedia.org/wiki/Chiffrement_de_bout_en_bout">bout à bout</a> grâce au standard <a href="https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard">AES-256</a>; elles ne peuvent donc être lues par personne — même pas l'hébérgeur — sans le lien unique qui contient la clef de chiffrement.</p>
 
 			<p>Le code est disponible librement ici: <a href="https://github.com/mbovel/hiersoir">github.com/mbovel/hiersoir</a>.</p>
 
 			<p>Ce site est hébérgé chez <a href="https://www.infomaniak.com/">Infomaniak</a> et a été développé par <a href="https://www.facebook.com/mbovel">Matthieu Bovel</a>.</p>
+
+			<p>Un grand merci aux personnes qui ont participé à l'élaboration de ce formulaire par leurs brillantes suggestions!</p>
 		</footer>
 
 		<div data-modal id="modal-shared" class="bx--modal" role="dialog" aria-modal="true" aria-labelledby="modal-shared-label" aria-describedby="modal-shared-heading" tabindex="-1">
