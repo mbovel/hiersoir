@@ -119,9 +119,9 @@ footer {
 }
 
 footer p {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 0.75rem 0;
 }
 
 @media only screen and (max-width: 60rem) {
