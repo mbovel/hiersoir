@@ -8,7 +8,7 @@ $min_time = $current_time - 3600 * 24 * 7; // 5 days ago
 foreach ($dir as $fileinfo) {
 	if (!$fileinfo->isDot()) {
 		if ($fileinfo->getMTime() < $min_time) {
-			echo "Removing " . $fileinfo->getPathname();
+			echo "Remove " . $fileinfo->getPathname() . PHP_EOL;
 			unlink($fileinfo->getPathname());
 		}
 	}
